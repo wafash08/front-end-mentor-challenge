@@ -36,14 +36,15 @@ form.addEventListener("submit", (e) => {
 });
 
 function setErrorFor(field, message) {
-  const small = form[field].parentNode.querySelector("small");
+  const formControl = form[field].parentNode;
+  formControl.classList.add("error");
+  const small = formControl.querySelector("small");
   small.innerText = message;
-  small.style.opacity = 1;
 }
 
 function removeErrorfrom(field) {
-  const small = form[field].parentNode.querySelector("small");
-  small.style.opacity = 0;
+  const formControl = form[field].parentNode;
+  formControl.classList.remove("error");
 }
 
 function isValid(email) {

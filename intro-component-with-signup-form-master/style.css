@@ -77,6 +77,10 @@ p {
   opacity: 0;
 }
 
+.form-control.error small {
+  opacity: 1;
+}
+
 input {
   display: block;
   width: 100%;
@@ -91,6 +95,27 @@ input {
 input:focus {
   outline: none;
   border-color: var(--box-blue);
+}
+
+.form-control.error input {
+  border-color: var(--bg-color);
+  color: var(--bg-color);
+}
+
+.form-control.error input::placeholder {
+  color: var(--bg-color);
+}
+
+.form-control img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  opacity: 0;
+}
+
+.form-control.error img {
+  opacity: 1;
 }
 
 button {
